@@ -1,47 +1,140 @@
+import { useRef, useState, useEffect } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
 export default function Hero() {
+  const containerRef = useRef<HTMLElement>(null);
+  const [typedName, setTypedName] = useState('');
+  const [typedRole, setTypedRole] = useState('');
+
+  const fullName = "Abhay";
+  const fullRole = "MERN Stack Developer";
+
+  useEffect(() => {
+    let nameTimeout: NodeJS.Timeout;
+    let roleTimeout: NodeJS.Timeout;
+
+    // Start typing name after initial load
+    nameTimeout = setTimeout(() => {
+      let n = 0;
+      const nameInterval = setInterval(() => {
+        n++;
+        setTypedName(fullName.slice(0, n));
+        if (n === fullName.length) {
+          clearInterval(nameInterval);
+          
+          // Wait a bit, then start role
+          roleTimeout = setTimeout(() => {
+            let r = 0;
+            const roleInterval = setInterval(() => {
+              r++;
+              setTypedRole(fullRole.slice(0, r));
+              if (r === fullRole.length) {
+                clearInterval(roleInterval);
+              }
+            }, 50); // Role typing speed (moderate)
+          }, 400);
+        }
+      }, 100); // Name typing speed (moderate)
+    }, 500);
+
+    return () => {
+      clearTimeout(nameTimeout);
+      clearTimeout(roleTimeout);
+    };
+  }, []);
+
+  useGSAP(() => {
+    const tl = gsap.timeline(); 
+
+    // Image reveal
+    tl.fromTo('.hero-img', 
+      { scale: 0, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 1, ease: 'back.out(1.5)' }
+    );
+
+    // Text masked reveal
+    tl.fromTo('.hero-text-mask > *', 
+      { y: '150%' },
+      { y: '0%', duration: 0.8, stagger: 0.15, ease: 'power4.out' },
+      "-=0.5"
+    );
+    
+    // Subtext fade in
+    tl.fromTo('.hero-subtext',
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 1, ease: 'power3.out' },
+      "-=0.5"
+    );
+
+    // Buttons
+    tl.fromTo('.hero-btn',
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out' },
+      "-=0.5"
+    );
+  }, { scope: containerRef });
+
   return (
-    <main className="w-full bg-[#0b1121] border border-white/5 rounded-[2rem] p-8 md:p-16 relative overflow-hidden flex flex-col items-center text-center shadow-[0_0_30px_rgba(0,0,0,0.5)] min-h-[600px] justify-center">
-      
-      {/* Top glowing background effect */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-64 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+    <main ref={containerRef} className="w-full p-8 md:p-16 relative flex flex-col items-center text-center justify-center">
 
       {/* Profile Image */}
-      <div className="relative mb-6 group">
-        {/* Outer glow */}
-        <div className="absolute inset-0 bg-cyan-500/20 blur-xl rounded-full scale-110 transition-transform group-hover:scale-125"></div>
-        {/* Image Container */}
-        <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-cyan-500/30 overflow-hidden relative z-10 bg-[#151c2f]">
-          <img 
-            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            alt="Abhay" 
-            className="w-full h-full object-cover"
-          />
+      <div className="relative z-10 mb-8 group mt-10 md:mt-0 hero-img">
+        <div className="absolute inset-0 bg-cyan-400 rounded-full blur-[20px] opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+        <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-[#111827] border-2 border-cyan-500/30 overflow-hidden flex items-center justify-center relative shadow-[0_0_30px_rgba(6,182,212,0.3)]">
+          <div className="text-cyan-400 font-bold text-4xl">A</div>
         </div>
       </div>
 
       {/* Text Content */}
-      <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight text-white">
-        Hi, I'm <span className="text-cyan-400">Abhay</span>
-      </h1>
-      
-      <h2 className="text-lg md:text-xl text-slate-300 font-medium mb-6">
-        I'm a <span className="text-cyan-400">UI/UX Designer</span>
-        <span className="text-cyan-400 animate-pulse">|</span>
-      </h2>
+      <div className="relative z-10 flex flex-col items-center max-w-6xl w-full mx-auto text-center">
+        
+        {/* Title with Masked Reveal for prefix, typing for name */}
+        <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight text-white drop-shadow-lg flex flex-wrap justify-center gap-x-3 md:gap-x-4">
+          <div className="overflow-hidden hero-text-mask pb-2">
+            <span className="inline-block">Hi,</span>
+          </div>
+          <div className="overflow-hidden hero-text-mask pb-2">
+            <span className="inline-block">I'm</span>
+          </div>
+          <div className="pb-2 pt-2 -mt-2">
+            <span className="inline-block text-cyan-400 drop-shadow-[0_0_15px_rgba(6,182,212,0.8)]">
+              {typedName}
+              <span 
+                className={`text-white ml-1 ${typedName.length === fullName.length ? 'opacity-0 hidden' : 'animate-pulse inline-block'}`}
+                style={{ animationDuration: '700ms' }}
+              >|</span>
+              <span className="opacity-0">{fullName.slice(typedName.length)}</span>
+            </span>
+          </div>
+        </h1>
+        
+        <div className="mb-8 pb-2 h-8 md:h-10 flex items-center justify-center">
+          <h2 className="inline-block text-xl md:text-2xl text-slate-300 font-medium">
+            {typedRole}
+            <span 
+              className={`text-cyan-400 ml-[2px] font-light ${typedName.length === fullName.length ? 'animate-pulse opacity-100' : 'opacity-0'}`}
+              style={{ animationDuration: '700ms' }}
+            >|</span>
+            <span className="opacity-0">{fullRole.slice(typedRole.length)}</span>
+          </h2>
+        </div>
 
-      <p className="max-w-lg text-slate-400 mb-10 text-sm md:text-base leading-relaxed">
-        I create beautiful, responsive web experiences using modern technologies.
-        Passionate about clean code and user-centered design.
-      </p>
+        <p className="hero-subtext max-w-xl text-center text-blue-100/70 mb-12 text-base md:text-lg leading-relaxed font-light">
+          I create beautiful, responsive web experiences using modern technologies.
+          Passionate about clean code and user-centered design.
+        </p>
 
-      {/* Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4">
-        <button className="px-8 py-3 rounded-full bg-cyan-500 text-[#050511] font-semibold hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all cursor-pointer">
-          View My Work
-        </button>
-        <button className="px-8 py-3 rounded-full border border-slate-600 text-white font-semibold hover:border-slate-400 hover:bg-white/5 transition-all cursor-pointer">
-          Download CV
-        </button>
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center relative z-20">
+          <a href="#projects" className="hero-btn px-8 py-3.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-[#050511] font-bold transition-all duration-300 shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] hover:-translate-y-1 text-center inline-block">
+            View My Work
+          </a>
+          
+          <a href="/resume (5).pdf" download="Abhay_Nagpure_Resume.pdf" className="hero-btn px-8 py-3.5 rounded-full bg-transparent border border-white/20 hover:border-cyan-400 text-white hover:text-cyan-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(6,182,212,0.2)] text-center inline-block">
+            Download Resume
+          </a>
+        </div>
       </div>
       
     </main>
