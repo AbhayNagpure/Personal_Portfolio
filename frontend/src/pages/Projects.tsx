@@ -205,7 +205,7 @@ export default function Projects() {
   }, { scope: containerRef });
 
   return (
-    <main ref={containerRef} className="w-full p-4 md:p-8 relative flex flex-col items-center justify-center">
+    <main ref={containerRef} className="w-full p-4 pt-24 md:p-8 md:pt-8 relative flex flex-col items-center justify-center">
 
       {/* Constrained container for perfect center alignment */}
       <div className="max-w-6xl w-full mx-auto flex flex-col relative z-10 min-h-[80vh]">

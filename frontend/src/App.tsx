@@ -5,8 +5,17 @@ import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    // Prevent browser from restoring scroll position on refresh
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="bg-[#050511] text-white min-h-screen relative w-full cursor-none md:cursor-auto">
       <Cursor />
