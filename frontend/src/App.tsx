@@ -17,7 +17,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-[#050511] text-white min-h-screen relative w-full cursor-none md:cursor-auto">
+    <div className="bg-[#050511] text-white min-h-[100dvh] relative w-full cursor-none md:cursor-auto">
       <Cursor />
 
       {/* Fixed Background Glows */}
@@ -31,23 +31,23 @@ function App() {
       {/* Main Scrolling Content */}
       <main className="w-full flex flex-col">
         
-        <section id="hero" className="w-full min-h-screen flex items-center justify-center">
+        <section id="hero" className="w-full min-h-[100dvh] flex items-center justify-center">
           <Hero />
         </section>
         
-        <section id="skills" className="w-full min-h-screen flex items-center justify-center">
+        <section id="skills" className="w-full min-h-[100dvh] flex items-center justify-center">
           <Skills />
         </section>
         
-        <section id="projects" className="w-full min-h-screen flex items-center justify-center">
+        <section id="projects" className="w-full min-h-[100dvh] flex items-center justify-center">
           <Projects />
         </section>
         
-        <section id="about" className="w-full min-h-screen flex items-center justify-center">
+        <section id="about" className="w-full min-h-[100dvh] flex items-center justify-center">
           <About />
         </section>
         
-        <section id="contact" className="w-full min-h-screen flex items-center justify-center">
+        <section id="contact" className="w-full min-h-[100dvh] flex items-center justify-center">
           <Contact />
         </section>
 
