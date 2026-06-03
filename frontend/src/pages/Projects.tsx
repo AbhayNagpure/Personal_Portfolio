@@ -136,6 +136,7 @@ export default function Projects() {
     github: string;
     live: string;
     client?: string;
+    inProgress?: boolean;
   }[] = [
     {
       title: "Crafter-Productions",
@@ -223,9 +224,16 @@ export default function Projects() {
           </div>
         </div>
         
-        {/* Grid container for projects */}
-        <div className="w-full flex-1 relative pb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 w-full text-left">
+        {/* Grid container for projects in a neon tub */}
+        <div className="w-full flex-1 relative pb-8 mt-4 p-4 md:p-6 lg:p-8 pt-0 md:pt-0">
+          
+          {/* Neon Tub Borders */}
+          <div className="absolute inset-0 border-l-[3px] border-r-[3px] border-b-[3px] border-cyan-400/60 rounded-b-[2.5rem] pointer-events-none drop-shadow-[0_0_15px_rgba(6,182,212,0.8)] z-0"></div>
+          
+          {/* Subtle tub inner ambient lighting */}
+          <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-cyan-500/10 to-transparent blur-[40px] pointer-events-none rounded-b-[2.5rem] z-0"></div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 w-full text-left relative z-10 -mt-4 lg:-mt-8">
             {projects.map((proj, idx) => (
                <ProjectCard key={`${proj.title}-${idx}`} {...proj} />
             ))}
