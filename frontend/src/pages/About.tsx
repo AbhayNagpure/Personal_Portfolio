@@ -2,7 +2,7 @@ import { GraduationCap, Code2, Dumbbell, Brain, Palette } from 'lucide-react';
 
 export default function About() {
   return (
-    <main className="w-full p-8 md:p-16 relative flex flex-col items-center justify-center">
+    <main className="w-full p-8 pt-24 md:p-16 relative flex flex-col items-center justify-center">
 
       <div className="max-w-6xl w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 relative z-10">
         

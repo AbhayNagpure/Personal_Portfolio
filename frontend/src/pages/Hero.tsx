@@ -80,7 +80,7 @@ export default function Hero() {
     <main ref={containerRef} className="w-full p-8 md:p-16 relative flex flex-col items-center text-center justify-center">
 
       {/* Profile Image */}
-      <div className="relative z-10 mb-8 group mt-10 md:mt-0 hero-img">
+      <div className="relative z-10 mb-8 group mt-24 md:mt-0 hero-img">
         <div className="absolute inset-0 bg-cyan-400 rounded-full blur-[20px] opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
         <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-[#111827] border-2 border-cyan-500/30 overflow-hidden flex items-center justify-center relative shadow-[0_0_30px_rgba(6,182,212,0.3)]">
           <div className="text-cyan-400 font-bold text-4xl">A</div>
