@@ -1,4 +1,4 @@
-import { Home, User, Briefcase, FolderOpen, Type, Mail } from 'lucide-react';
+import { Home, User, Briefcase, FolderOpen, Mail } from 'lucide-react';
 import { NavLink, Outlet } from 'react-router-dom';
 
 export default function Layout() {
