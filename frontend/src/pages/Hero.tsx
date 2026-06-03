@@ -2,6 +2,8 @@ import { useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
+
+
 export default function Hero() {
   const containerRef = useRef<HTMLElement>(null);
   const [typedName, setTypedName] = useState('');
@@ -11,11 +13,10 @@ export default function Hero() {
   const fullRole = "MERN Stack Developer";
 
   useEffect(() => {
-    let nameTimeout: NodeJS.Timeout;
-    let roleTimeout: NodeJS.Timeout;
+    let roleTimeout: ReturnType<typeof setTimeout>;
 
     // Start typing name after initial load
-    nameTimeout = setTimeout(() => {
+    const nameTimeout = setTimeout(() => {
       let n = 0;
       const nameInterval = setInterval(() => {
         n++;
