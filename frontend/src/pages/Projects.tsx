@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { ExternalLink, Code, Video, MessageSquare, ShoppingCart, Database } from 'lucide-react';
+import { ExternalLink, Code, Video, MessageSquare, Database } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
@@ -151,25 +151,24 @@ export default function Projects() {
     },
     {
       title: "ChatHive",
-      description: "A real-time messaging platform with JWT authentication and bcrypt encryption. Offers persistent chat rooms and live indicators.",
-      tags: ["React", "Socket.io", "Node.js", "Express", "MongoDB"],
+      description: "A scalable full-stack messaging platform with low-latency bi-directional communication using WebSockets and Socket.io.",
+      tags: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "JWT", "Cloudinary", "Resend"],
       badge: "REAL-TIME",
       icon: MessageSquare,
       color: "emerald",
       github: "https://github.com/AbhayNagpure/ChatHive",
-      live: "https://chatify-two-puce.vercel.app/",
-      inProgress: true
+      live: "https://chatify-two-puce.vercel.app/"
     },
     {
-      title: "NexMart",
-      description: "A full-stack e-commerce platform built for scale. Delivers a seamless shopping experience with secure payments.",
-      tags: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
-      badge: "E-COMMERCE",
-      icon: ShoppingCart,
+      title: "MobileCareTech (MCT)",
+      description: "A production-ready MERN application integrating a Gemini API AI assistant with Hindi/Hinglish voice input to automate customer assistance.",
+      tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind", "JWT", "OAuth", "Gemini API"],
+      badge: "FREELANCE",
+      icon: Database,
       color: "blue",
-      github: "https://github.com/AbhayNagpure/NexMart",
-      live: "",
-      inProgress: true
+      github: "https://github.com/AbhayNagpure/MobileCareTech",
+      live: "https://mobilecaretech.in",
+      client: "Freelance Client"
     },
     {
       title: "Product Store",
