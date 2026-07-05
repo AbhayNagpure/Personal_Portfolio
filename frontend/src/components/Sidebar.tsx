@@ -37,23 +37,23 @@ export default function Sidebar() {
 
   return (
     <nav className="fixed z-50 bg-[#0b1121]/90 backdrop-blur-md border border-cyan-500/30 transition-all duration-500 shadow-[0_0_25px_rgba(6,182,212,0.4)] hover:shadow-[0_0_35px_rgba(6,182,212,0.6)]
-      top-4 left-1/2 -translate-x-1/2 flex flex-row px-4 py-2 gap-2 sm:gap-4 rounded-full w-auto
-      md:top-1/2 md:-translate-y-1/2 md:left-8 md:-translate-x-0 md:flex-col md:px-3 md:py-6
+      bottom-6 left-1/2 -translate-x-1/2 flex flex-row px-4 py-2 gap-2 sm:gap-4 rounded-full w-auto
+      lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 lg:left-6 xl:left-8 lg:-translate-x-0 lg:flex-col lg:px-3 lg:py-6
     ">
       <a href="#hero" className={getLinkClass('hero')} title="Home">
-        <Home size={20} className="w-5 h-5 sm:w-6 sm:h-6 md:w-5 md:h-5" />
+        <Home size={20} className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />
       </a>
       <a href="#skills" className={getLinkClass('skills')} title="Skills">
-        <Briefcase size={20} className="w-5 h-5 sm:w-6 sm:h-6 md:w-5 md:h-5" />
+        <Briefcase size={20} className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />
       </a>
       <a href="#projects" className={getLinkClass('projects')} title="Projects">
-        <FolderOpen size={20} className="w-5 h-5 sm:w-6 sm:h-6 md:w-5 md:h-5" />
+        <FolderOpen size={20} className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />
       </a>
       <a href="#about" className={getLinkClass('about')} title="About Me">
-        <User size={20} className="w-5 h-5 sm:w-6 sm:h-6 md:w-5 md:h-5" />
+        <User size={20} className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />
       </a>
       <a href="#contact" className={getLinkClass('contact')} title="Contact">
-        <Mail size={20} className="w-5 h-5 sm:w-6 sm:h-6 md:w-5 md:h-5" />
+        <Mail size={20} className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />
       </a>
     </nav>
   );
