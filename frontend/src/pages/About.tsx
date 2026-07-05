@@ -14,10 +14,10 @@ export default function About() {
           
           <div className="space-y-4 mb-10">
             <p className="text-slate-300/90 text-sm md:text-base leading-relaxed font-light">
-              I'm an <span className="text-cyan-400 font-medium">Engineering Physics undergrad at IIT (ISM) Dhanbad</span>, building production-grade full-stack apps with the MERN stack. Currently freelancing, grinding Codeforces, and exploring AI/ML integrations.
+              I'm an <span className="text-cyan-400 font-medium">Engineering Physics undergrad at IIT (ISM) Dhanbad</span> and a freelance Full-Stack Developer building production-ready scalable web solutions. I'm also a competitive programming enthusiast with a <span className="text-cyan-400 font-medium">1246 rating (Pupil) on Codeforces</span> (350+ problems solved).
             </p>
             <p className="text-slate-300/90 text-sm md:text-base leading-relaxed font-light">
-              When I'm not coding, I'm either at the gym or just recharging on my own — I do my best thinking in solitude.
+              When I'm not coding, you'll find me at the gym, contributing to <span className="text-cyan-400 font-medium">FotoFreaks (our college Photography Club)</span>, or just recharging on my own. I do my best thinking in solitude.
             </p>
           </div>
 
@@ -54,7 +54,8 @@ export default function About() {
             
             <h2 className="text-[10px] uppercase tracking-widest text-cyan-400 font-bold mb-2 relative z-10">Education</h2>
             <h3 className="text-2xl font-bold text-white mb-2 relative z-10">IIT (ISM) Dhanbad</h3>
-            <p className="text-slate-300 font-medium mb-4 relative z-10">B.Tech in Engineering Physics</p>
+            <p className="text-slate-300 font-medium mb-2 relative z-10">B.Tech in Engineering Physics</p>
+            <p className="text-cyan-400 font-medium text-sm mb-4 relative z-10">CGPA: 6.84</p>
             
             <div className="w-full h-px bg-gradient-to-r from-cyan-500/50 to-transparent my-6 relative z-10"></div>
             
