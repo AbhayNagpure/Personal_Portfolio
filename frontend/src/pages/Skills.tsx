@@ -12,13 +12,14 @@ const allIcons = [
   { name: 'MongoDB', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg', style: 'border-green-400/30 shadow-[0_0_20px_rgba(74,222,128,0.3)]' },
   { name: 'Express', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg', style: 'border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.3)]', invert: true },
   { name: 'JavaScript', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg', style: 'border-yellow-400/30 shadow-[0_0_20px_rgba(250,204,21,0.3)]' },
-  { name: 'HTML5', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg', style: 'border-orange-500/30 shadow-[0_0_20px_rgba(249,115,22,0.3)]' },
-  { name: 'CSS3', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg', style: 'border-blue-500/30 shadow-[0_0_20px_rgba(59,130,246,0.3)]' },
+  { name: 'Python', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg', style: 'border-blue-500/30 shadow-[0_0_20px_rgba(59,130,246,0.3)]' },
+  { name: 'C++', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg', style: 'border-blue-600/30 shadow-[0_0_20px_rgba(37,99,235,0.3)]' },
+  { name: 'Java', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg', style: 'border-orange-500/30 shadow-[0_0_20px_rgba(249,115,22,0.3)]' },
   { name: 'Tailwind', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg', style: 'border-cyan-400/30 shadow-[0_0_20px_rgba(56,189,248,0.3)]' },
   { name: 'Vite', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg', style: 'border-purple-500/30 shadow-[0_0_20px_rgba(168,85,247,0.3)]' },
   { name: 'Git', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg', style: 'border-orange-600/30 shadow-[0_0_20px_rgba(234,88,12,0.3)]' },
   { name: 'VS Code', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg', style: 'border-blue-400/30 shadow-[0_0_20px_rgba(96,165,250,0.3)]' },
-  { name: 'Photoshop', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg', style: 'border-blue-600/30 shadow-[0_0_20px_rgba(37,99,235,0.3)]' },
+  { name: 'Figma', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg', style: 'border-purple-400/30 shadow-[0_0_20px_rgba(168,85,247,0.3)]' },
   { name: 'Postman', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg', style: 'border-orange-400/30 shadow-[0_0_20px_rgba(251,146,60,0.3)]' },
 ];
 

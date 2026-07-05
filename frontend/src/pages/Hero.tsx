@@ -132,7 +132,7 @@ export default function Hero() {
             View My Work
           </a>
           
-          <a href="/resume (5).pdf" download="Abhay_Nagpure_Resume.pdf" className="hero-btn px-8 py-3.5 rounded-full bg-transparent border border-white/20 hover:border-cyan-400 text-white hover:text-cyan-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(6,182,212,0.2)] text-center inline-block">
+          <a href="/Abhay_Nagpure_Resume.pdf" download="Abhay_Nagpure_Resume.pdf" className="hero-btn px-8 py-3.5 rounded-full bg-transparent border border-white/20 hover:border-cyan-400 text-white hover:text-cyan-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(6,182,212,0.2)] text-center inline-block">
             Download Resume
           </a>
         </div>
