@@ -77,7 +77,7 @@ export default function Hero() {
   }, { scope: containerRef });
 
   return (
-    <main ref={containerRef} className="w-full p-8 md:p-16 relative flex flex-col items-center text-center justify-center">
+    <main ref={containerRef} className="w-full p-6 pb-24 md:p-12 md:pb-28 lg:p-16 lg:pl-28 xl:pl-32 relative flex flex-col items-center text-center justify-center min-h-[100dvh]">
 
       {/* Profile Image */}
       <div className="relative z-10 mb-8 group mt-12 md:mt-0 hero-img">
