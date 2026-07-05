@@ -81,8 +81,7 @@ export default function Contact() {
 
   return (
     <main ref={containerRef} className="w-full p-8 pt-24 md:p-16 relative flex flex-col items-center justify-center">
-
-      <div className="max-w-6xl w-full mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24 relative z-10">
+      <div className="max-w-6xl w-full mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-24 relative z-10">
         
         {/* Left Side: Contact Info */}
         <div className="flex-1 flex flex-col text-left justify-center">

@@ -231,8 +231,7 @@ export default function Projects() {
           
           {/* Subtle tub inner ambient lighting */}
           <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-cyan-500/10 to-transparent blur-[40px] pointer-events-none rounded-b-[2.5rem] z-0"></div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 w-full text-left relative z-10 -mt-4 lg:-mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 lg:gap-6 w-full text-left relative z-10 -mt-4 lg:-mt-8">
             {projects.map((proj, idx) => (
                <ProjectCard key={`${proj.title}-${idx}`} {...proj} />
             ))}

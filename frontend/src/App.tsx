@@ -29,7 +29,7 @@ function App() {
       <Sidebar />
 
       {/* Main Scrolling Content */}
-      <main className="w-full flex flex-col">
+      <main className="w-full flex flex-col pt-20 md:pt-0 md:pl-28 lg:pl-32">
         
         <section id="hero" className="w-full min-h-[100dvh] flex items-center justify-center">
           <Hero />

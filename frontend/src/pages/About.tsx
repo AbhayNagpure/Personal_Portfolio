@@ -3,8 +3,7 @@ import { GraduationCap, Code2, Dumbbell, Brain, Palette } from 'lucide-react';
 export default function About() {
   return (
     <main className="w-full p-8 pt-24 md:p-16 relative flex flex-col items-center justify-center">
-
-      <div className="max-w-6xl w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 relative z-10">
+      <div className="max-w-6xl w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 xl:gap-20 relative z-10">
         
         {/* Left: About Text */}
         <div className="flex-1 w-full flex flex-col justify-center text-left">
@@ -55,7 +54,7 @@ export default function About() {
             <h2 className="text-[10px] uppercase tracking-widest text-cyan-400 font-bold mb-2 relative z-10">Education</h2>
             <h3 className="text-2xl font-bold text-white mb-2 relative z-10">IIT (ISM) Dhanbad</h3>
             <p className="text-slate-300 font-medium mb-2 relative z-10">B.Tech in Engineering Physics</p>
-            <p className="text-cyan-400 font-medium text-sm mb-4 relative z-10">CGPA: 6.84</p>
+            
             
             <div className="w-full h-px bg-gradient-to-r from-cyan-500/50 to-transparent my-6 relative z-10"></div>
             
